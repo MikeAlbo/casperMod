@@ -8,14 +8,14 @@
 jQuery(document).ready(function (){
 
     // -- post and tag data pulled from the server --
-    var postAndTagData = [];
+    var postData = [], tagData = [];
 
     // -- AJAX get request for the blog tags, using the ghost.url.api to generate the link --
     function getTags() {
         $.get(
             ghost.url.api('tags', {limit: 'all', fields: 'uuid, name'})
         ).done(function (data) {
-            postAndTagData = postAndTagData.concat(data.tags);
+            tagData = data.tags;
         }).error(function (err) {
             console.log(err);
         })
@@ -26,7 +26,7 @@ jQuery(document).ready(function (){
         $.get(
              ghost.url.api('posts', {limit: 'all', fields: 'uuid, author, title, created_at, url, featured, markdown, tags', include: "author, tags"})
         ).done(function (data) {
-           postAndTagData = postAndTagData.concat(data.posts);
+           postData = data.posts;
         }).fail(function (err) {
             console.log(err);
         })
@@ -36,12 +36,15 @@ jQuery(document).ready(function (){
     function initSearch() {
         $.when(getPost(), getTags()).done(function () {
             setTimeout(function () {
-                console.log(postAndTagData);
+                //console.log(tagData, postData);
+                console.log("results: ", filterPost('Kri'));
+                console.log("tags: ", filterTags('Chr'));
             }, 1);
         })
     }
 
 
+    initSearch();
 
     // initialize the search div
 
@@ -50,12 +53,27 @@ jQuery(document).ready(function (){
 
     // filter the list by name, author, and tags
     
-    function filter(value) {
-        return postAndTagData.filter(function (item) {
-            return item.name == value || item.tags.name == value || item.author.name == value;
+    function filterPost(value) {
+        return postData.filter(function (post) {
+            var regex = new RegExp(value, "igm");
+            if(regex.test(post.title)){
+                return post;
+            } else if (regex.test(post.author.name)){
+                return post;
+            } else if (regex.test(post.tags.name)){
+                return post;
+            }
         })
     }
 
+    function filterTags(value) {
+        return tagData.filter(function (tag) {
+            var regex = new RegExp(value, "igm");
+            if(regex.test(tag.name)){
+                return tag;
+            }
+        })
+    }
 
 
 });
