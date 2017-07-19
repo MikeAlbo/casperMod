@@ -11,7 +11,7 @@ jQuery(document).ready(function (){
 
     function getTags() {
         $.get(
-            ghost.url.api('tags', {limit: 'all'})
+            ghost.url.api('tags', {limit: 'all', fields: 'uuid, name'})
         ).done(function (data) {
             console.log(data);
         }).error(function (err) {
@@ -21,7 +21,7 @@ jQuery(document).ready(function (){
 
     function getPost() {
         $.get(
-            ghost.url.api('posts', {limit: 'all', /*fields: 'uuid, author, title, created_at, url, featured, markdown',*/ include: "author, tags"})
+             ghost.url.api('posts', {limit: 'all', fields: 'uuid, author, title, created_at, url, featured, markdown, tags', include: "author, tags"})
         ).done(function (data) {
             console.log(data);
         }).fail(function (err) {
