@@ -4,6 +4,23 @@
         /*padding-left: 1em;*/
     /*}*/
 
+   /* @keyframes searchFade {
+
+    }*/
+
+    .searchResults {
+        animation: fade-in-down;
+        animation-duration: 100ms;
+    }
+
+
+    .fadeOut {
+        animation: fade-in-down;
+        animation-direction: reverse;
+        animation-duration: 100ms;
+    }
+
+
     ul {
         list-style: none;
     }
@@ -15,9 +32,35 @@
     h2 {
         text-align: center;
     }
+
+    #searchInstructions {
+        text-align: center;
+        font-size: 1em;
+        font-weight: 100;
+        color: #50585D;
+    }
+
+    #searchDivCloseButton {
+        background: transparent !important;
+        color: #2e2e2e;
+        border: 0;
+        position: inherit;
+        right: 20%;
+    }
+
+    #searchContainer1 {
+       position: absolute;
+        left: 50%;
+        transform: translateY(-50%);
+    }
+
+    #resultsContainer {
+    }
+
+
 </style>
 
-<h2>Results</h2>
-
-<div class="searchResults"><ul id="resultsContainer"></ul></div>
+<h2>Search</h2>
+<p id="searchInstructions">Search by Title, Tag, or Author. <br> Current Results: &#40;<span id="searchCountValue">0</span>&#41;</p>
+<div id="resultsContainer"></div>
 

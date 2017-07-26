@@ -8,6 +8,116 @@ jQuery(document).ready(function (){
 
 
     var resultsContainer = $("#resultsContainer");
+    var searchContainer = $("#searchContainer");
+    var mainBlogLoop = $("#mainBlogLoop");
+    var searchBoxButton = $("#searchBoxButton");
+    var searchBoxInput = $("#searchBoxInput");
+    var searchCountValue = $("#searchCountValue");
+
+    searchContainer.hide();
+
+    var viewSearchBool = false;
+
+    var demoButton = $("#demoButton"); // remove
+    demoButton.on('click', function(){  //remove
+        fadeSearch(viewSearchBool);
+    });
+
+    // show and hide the search bar
+
+    var searchButton = $("#searchButton");
+
+    function showSearchDiv(show) {
+        if(show){
+            searchBoxInput.addClass("scaleOut-searchInput");
+            searchButton.addClass("hideButton-searchButton");
+        } else {
+            searchBoxInput.removeClass("scaleOut-searchInput");
+            searchButton.removeClass("hideButton-searchButton");
+        }
+    }
+
+
+    $(searchButton).on('click', function () {
+        showSearchDiv(true);
+        setTimeout(function () {
+            searchBoxInput.focus();
+        },300);
+    })
+
+
+    // update search results count value
+    function updateResultsCount(count) {
+        searchCountValue.text(count);
+    }
+
+
+    // ===== animations ====== \\
+
+    // cross-fade the main blog loop and the search results container
+
+    function crossFadeContainers(containerIn, containerOut) {
+        containerOut.fadeOut(200, function () {
+            containerIn.fadeIn(1000);
+        });
+    }
+
+
+    //searchBox onFocus event
+    searchBoxInput.focus(function () {
+       crossFadeContainers(searchContainer, mainBlogLoop);
+    });
+
+    //searchBox unFocus with empty search
+    searchBoxInput.focusout(function () {
+        if(searchBoxInput.val() === ''){
+            crossFadeContainers(mainBlogLoop, searchContainer);
+            showSearchDiv();
+        }
+    });
+
+
+    //searchBox onClick handler
+    searchBoxInput.on('keyup',function (e) {
+
+        searchContainer.show();
+
+        if(e.which === 13){
+            // handle enter function
+        } else {
+            // handle live search
+            callLiveSearchOnValue();
+
+            if(!viewSearchBool){
+                viewSearchBool = true;
+                fadeSearch(viewSearchBool);
+            }
+
+            if(searchBoxInput.val() == '' && viewSearchBool){
+                viewSearchBool = false;
+                fadeSearch(viewSearchBool);
+            }
+        }
+    });
+
+    function callLiveSearchOnValue(){
+        var searchText = searchBoxInput.val();
+        console.log(searchText);
+        liveSearch(searchText);
+    }
+
+    function fadeSearch(viewSearch) {
+        if(viewSearch){
+            searchContainer.fadeIn();
+            mainBlogLoop.fadeOut();
+            viewSearchBool = false;
+        }else {
+            mainBlogLoop.fadeIn();
+            searchContainer.fadeOut();
+            viewSearchBool = true;
+        }
+    }
+
 
     // -- post and tag data pulled from the server --
     var postData = [], tagData = [];
@@ -15,11 +125,11 @@ jQuery(document).ready(function (){
     // -- AJAX get request for the blog tags, using the ghost.url.api to generate the link --
     function getTags() {
         $.get(
-            ghost.url.api('tags', {limit: 'all', fields: 'uuid, name'})
+            ghost.url.api('tags', {limit: 'all', fields: 'uuid, name, slug'})
         ).done(function (data) {
-            tagData = data.tags;
+            return tagData = data.tags;
         }).error(function (err) {
-            console.log(err);
+            console.error(err);
         })
     }
 
@@ -28,9 +138,9 @@ jQuery(document).ready(function (){
         $.get(
              ghost.url.api('posts', {limit: 'all', fields: 'uuid, author, title, created_at, url, featured, markdown, tags', include: "author, tags"})
         ).done(function (data) {
-           postData = data.posts;
+           return postData = data.posts;
         }).fail(function (err) {
-            console.log(err);
+            console.error(err);
         })
     }
 
@@ -38,14 +148,19 @@ jQuery(document).ready(function (){
     function initSearch() {
         $.when(getPost(), getTags()).done(function () {
             setTimeout(function () {
-                console.log(postData);
+                //console.log(postData);
                 //console.log("results: ", filterPost('Michael'));
                 //console.log("tags: ", filterTags('Chr'));
+                console.log(tagData);
                 // filterPost('Michael').forEach(function (post) {
                 //     console.log("boom: ", post);
                 // });
 
-                liveSearch('Michael');
+                buildIndexPageTagList(tagData, 5);
+                autoLoadInitialSearchResults();
+
+                //liveSearch('Michael');
+                //fadeSearch(viewSearchBool);
             }, 100);
         })
     }
@@ -90,7 +205,30 @@ jQuery(document).ready(function (){
             return !regexp.test(char);
         });
 
-        return str.length < length ? str.join(' ') : str.slice(0,length + 1).join(' ');
+        str = str.join(' ').split('');
+
+        var regexForPhoto = new RegExp(/([!|\[])/, 'igm');
+        var photoFound = false;
+
+        var photoFiltered = [];
+
+        str.forEach(function (char) {
+            if(!regexForPhoto.test(char) && !photoFound){
+                photoFiltered.push(char);
+            } else {
+                photoFound = true;
+            }
+        });
+
+        photoFiltered = photoFiltered.join('').split(' ');
+
+
+        if(photoFiltered.length <= 1){
+            return '[ embedded images ]';
+        }
+
+
+        return photoFiltered.length < length ? photoFiltered.join(' ') : photoFiltered.slice(0,length + 1).join(' ');
     }
 
     function dateParser(rawDate) {
@@ -99,9 +237,6 @@ jQuery(document).ready(function (){
         var year = splitDate.splice(0,4).join('');
         var month = splitDate.splice(1,2).join('');
         var day = splitDate.splice(2,2).join('');
-        console.log("year", year);
-        console.log("Month", month);
-        console.log("Day", day);
 
         function monthToText(month) {
             switch(month){
@@ -132,42 +267,105 @@ jQuery(document).ready(function (){
 
         var date = dateParser(post.created_at);
 
-        /*
-        * <article class="{{post_class}}">
-         <header class="post-header">
-         <h2 class="post-title"><a href="{{url}}">{{title}}</a></h2>
-         </header>
-         <section class="post-excerpt">
-         <p>{{excerpt words="26"}} <a class="read-more" href="{{url}}">&raquo;</a></p>
-         </section>
-         <footer class="post-meta">
-         {{#if author.image}}<img class="author-thumb" src="{{author.image}}" alt="{{author.name}}" nopin="nopin" />{{/if}}
-         {{author}}
-         {{tags prefix=" on "}}
-         <time class="post-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMMM YYYY"}}</time>
-         </footer>
-         </article>*/
+        var result = '<article class="post searchResults" id="'+ post.uuid +'"> ';
 
-        var result = '<li><article class="post"> ';
+        result += '<header class="post-header"> <h2 class="post-title">Search -- <a href="'+ post.url+'">' + post.title + '</a></h2></header>';
+        result += '<section class="post-excerpt"><p>' +  excerpt;
 
-        result += '<header class="post-header"> <h2 class="post-title"><a href="'+ post.url+'">' + post.title + '</a></h2></header>';
-        result += '<section class="post-excerpt"><p>' +  excerpt + '<a class="read-more" href="'+ post.url+'"> &raquo;</a></p></section>';
-        result += '<footer class="post-meta">' + post.author.name + '<time class="post-date" datetime="'+ post.created_at +' format="YYYY-MM-DD">'+ date +'</time></footer>';
+        if(excerpt.length > 1){
+            result += '<a class="read-more" href="'+ post.url+'"> &raquo;</a></p></section>';
+        } else {
+            result += '<a class="read-more" href="'+ post.url+'"> No content...</a></p></section>';
+        }
+        result += '<footer class="post-meta">' + post.author.name;
+        if(post.tags.length != 0){
+            result += ' on  <a href="/tag/'+ post.tags[0].slug +'">' + post.tags[0].name + '</a>';
+        }
+        result += '<time class="post-date" datetime="'+ post.created_at +' format="YYYY-MM-DD">'+ date +'</time></footer>';
 
-        result += '</article></li>';
+        result += '</article>';
 
         return result;
     }
 
+    // function liveSearch(value) {
+    //
+    //     resultsContainer.fadeOut().empty();
+    //
+    //     filterPost(value).forEach(function (post) {
+    //         resultsContainer.append(postResult(post)).slideDown();
+    //     });
+    //
+    // }
+
     function liveSearch(value) {
 
-        filterPost(value).forEach(function (post) {
-            resultsContainer.append(postResult(post));
-        });
 
-        console.log("results ctrn: ", resultsContainer);
+        if(resultsContainer.children().length > 1) {
+            resultsContainer.empty();
 
+        }
+
+            var filteredPost = filterPost(value);
+            updateResultsCount(filteredPost.length);
+
+            filteredPost.forEach(function (post) {
+
+                resultsContainer.append(postResult(post));
+            });
+    }
+
+    function autoLoadInitialSearchResults() {
+
+        var length = postData.length > 5 ? 5 : postData.length;
+
+        for(var i = 0; i < length; i++){
+            resultsContainer.append(postResult(postData[i]));
+        }
+    }
+
+
+
+
+
+
+    // tag generation for home page
+    function tagBuilder(tag) {
+        // console.log("Tag builder: ", tag)
+        return '<li><a class="page-description" href="/tag/' + tag.slug + '/">'+tag.name+'</a></li>';
+    }
+
+    //generate tags
+    function generateTagsUl(tags, count) {
+
+        var ul = '<ul>';
+
+        count = count || tags.length;
+
+        for(var i = 0; i < count; i++){
+            ul += tagBuilder(tags[i]);
+        }
+
+        ul += '</ul>';
+
+        return ul;
+    }
+
+    // append the generated tags to the parent element inside of index.js
+    function buildIndexPageTagList(tags, count) {
+
+        $("#tags-container").append(generateTagsUl(tags, count));
     }
 
 
 });
+
+
+/*
+* main blog should slowly fade out upon initial search
+* search results should fade out and be hidden if the search box is empty and a search has been init
+* init search should not be called until the search box has focus
+*
+*
+*
+* */
