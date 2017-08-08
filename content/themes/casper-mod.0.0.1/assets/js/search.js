@@ -18,11 +18,6 @@ jQuery(document).ready(function (){
 
     var viewSearchBool = false;
 
-    var demoButton = $("#demoButton"); // remove
-    demoButton.on('click', function(){  //remove
-        fadeSearch(viewSearchBool);
-    });
-
     // show and hide the search bar
 
     var searchButton = $("#searchButton");
@@ -40,9 +35,9 @@ jQuery(document).ready(function (){
 
     $(searchButton).on('click', function () {
         showSearchDiv(true);
-        setTimeout(function () {
-            searchBoxInput.focus();
-        },300);
+        // setTimeout(function () {
+        //     searchBoxInput.focus();
+        // },300);
     })
 
 
@@ -63,9 +58,43 @@ jQuery(document).ready(function (){
     }
 
 
+    // scroll content
+
+    function scrollContentUponSearch() {
+        var _htmlBody = $("html, body");
+        var _contentTop = $("#content").offset().top  - 45;
+
+        // document.querySelector('#content').scrollIntoView({behavior: 'smooth', speed: 1000});
+        event.preventDefault();
+
+
+        _htmlBody.animate({
+            scrollTop: _contentTop
+        }, 1500, function () {
+            // menuButton.addClass('fade-out-element');
+            //searchButton.addClass('search-button-move');
+            //searchBoxInput.addClass('search-box-move');
+            searchBoxInput.focus();
+        });
+
+        // _htmlBody.scroll({
+        //     top: _contentTop,
+        //     left: 0,
+        //     behavior: 'smooth'
+        // });
+
+
+    }
+
+    searchButton.on('click', function () {
+        scrollContentUponSearch()
+    });
+
+
+
     //searchBox onFocus event
     searchBoxInput.focus(function () {
-       crossFadeContainers(searchContainer, mainBlogLoop);
+       //crossFadeContainers(searchContainer, mainBlogLoop);
     });
 
     //searchBox unFocus with empty search
@@ -80,11 +109,17 @@ jQuery(document).ready(function (){
     //searchBox onClick handler
     searchBoxInput.on('keyup',function (e) {
 
-        searchContainer.show();
+
+
+        //searchContainer.show();
+        crossFadeContainers(searchContainer, mainBlogLoop);
 
         if(e.which === 13){
             // handle enter function
         } else {
+
+            //scrollContentUponSearch();
+
             // handle live search
             callLiveSearchOnValue();
 
@@ -145,28 +180,17 @@ jQuery(document).ready(function (){
     }
 
     // jQuery promise (when) to notify that the data exist and the rest of the functionality can continue, wrapped in a function that is either called onLoad or when the user initiates the search
-    function initSearch() {
+    (function initSearch() {
         $.when(getPost(), getTags()).done(function () {
             setTimeout(function () {
-                //console.log(postData);
-                //console.log("results: ", filterPost('Michael'));
-                //console.log("tags: ", filterTags('Chr'));
-                console.log(tagData);
-                // filterPost('Michael').forEach(function (post) {
-                //     console.log("boom: ", post);
-                // });
-
-                buildIndexPageTagList(tagData, 5);
-                autoLoadInitialSearchResults();
-
-                //liveSearch('Michael');
-                //fadeSearch(viewSearchBool);
+                buildIndexPageTagList(tagData, 8); // modify the number of tags available
+                //autoLoadInitialSearchResults();
             }, 100);
         })
-    }
+    })();  // currently an auto invoking function, for mobile it will need to be called upon search request
 
 
-    initSearch();
+    //initSearch();
 
     // initialize the search div
 
@@ -198,6 +222,11 @@ jQuery(document).ready(function (){
     }
 
     function excerptParsers(text, length) {
+
+        if(text.length < 1){
+            return '';
+        }
+
         var str = text.split(' ');
         var regexp = new RegExp("#", 'igm');
 
@@ -269,7 +298,7 @@ jQuery(document).ready(function (){
 
         var result = '<article class="post searchResults" id="'+ post.uuid +'"> ';
 
-        result += '<header class="post-header"> <h2 class="post-title">Search -- <a href="'+ post.url+'">' + post.title + '</a></h2></header>';
+        result += '<header class="post-header"> <h2 class="post-title"><a href="'+ post.url+'">' + post.title + '</a></h2></header>';
         result += '<section class="post-excerpt"><p>' +  excerpt;
 
         if(excerpt.length > 1){
@@ -286,6 +315,19 @@ jQuery(document).ready(function (){
         result += '</article>';
 
         return result;
+    }
+
+    function tagResults(tag) {  //uuid, name, slug
+        var result = '<article class="post searchResults" id="'+ tag.uuid +'"> ';
+
+        result += '<header class="post-header"> <h2 class="post-title"><a href="/tag/'+ tag.slug+'/">' + tag.name + '</a></h2></header>';
+        result += '<section class="post-excerpt"><p> View all of <em>' + tag.name + '</em> related post. ';
+        result += '<a class="read-more" href="/tag/'+ tag.slug +'/"> &raquo;</a></p></section>';
+
+        result += '</article>';
+
+        return result;
+
     }
 
     // function liveSearch(value) {
@@ -307,23 +349,27 @@ jQuery(document).ready(function (){
         }
 
             var filteredPost = filterPost(value);
-            updateResultsCount(filteredPost.length);
+            var filteredTags = filterTags(value);
+            updateResultsCount(filteredPost.length + filteredTags.length);
 
             filteredPost.forEach(function (post) {
 
                 resultsContainer.append(postResult(post));
             });
+
+            filteredTags.forEach(function (tag) {
+                resultsContainer.append(tagResults(tag));
+            })
     }
 
-    function autoLoadInitialSearchResults() {
-
-        var length = postData.length > 5 ? 5 : postData.length;
-
-        for(var i = 0; i < length; i++){
-            resultsContainer.append(postResult(postData[i]));
-        }
-    }
-
+    // function autoLoadInitialSearchResults() {
+    //
+    //     var length = postData.length > 5 ? 5 : postData.length;
+    //
+    //     for(var i = 0; i < length; i++){
+    //         resultsContainer.append(postResult(postData[i]));
+    //     }
+    // };
 
 
 
@@ -354,7 +400,7 @@ jQuery(document).ready(function (){
     // append the generated tags to the parent element inside of index.js
     function buildIndexPageTagList(tags, count) {
 
-        $("#tags-container").append(generateTagsUl(tags, count));
+        $(".tags-container").append(generateTagsUl(tags, count));
     }
 
 

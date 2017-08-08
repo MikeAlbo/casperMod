@@ -14,6 +14,7 @@
         $postContent.fitVids();
 
         $(".scroll-down").arctic_scroll();
+        //$("#searchButton").arctic_scroll();
 
         $(".menu-button, .nav-cover, .nav-close").on("click", function(e){
             e.preventDefault();
@@ -42,7 +43,7 @@
                 toMove;
 
             if (offset) {
-                toMove = parseInt(offset);
+                toMove = parseInt(offset /*- 90*/); /* modifyed to stop the scroll below fixed nav*/
                 $htmlBody.stop(true, false).animate({scrollTop: ($(this.hash).offset().top + toMove) }, allOptions.speed);
             } else if (position) {
                 toMove = parseInt(position);

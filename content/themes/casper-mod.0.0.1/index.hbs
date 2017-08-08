@@ -6,12 +6,20 @@
     <nav class="main-nav overlay clearfix" id="header-navigation">
         {{#if @blog.logo}}<a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>{{/if}}
 
-            <a id="searchButton"><i class="fa fa-search" aria-hidden="true"></i> Search</a>
-            <input type="text" placeholder="post, subjects, authors..." id="searchBoxInput" autocomplete="off">
+        <!--<h1 id="fixedTitle">{{@blog.title}} | <small>{{@blog.description}}</small></h1>-->
+
+        <!--<section class="tags-container" id="fixedNavTagContainer"></section>-->
+
+            <a id="searchButton"  data-offset="-45"><i class="fa fa-search" aria-hidden="true"></i> Search</a>
+            <input type="text" placeholder="post, subjects, authors..." id="searchBoxInput" autocomplete="off" class="search-scroll">
 
         {{#if @blog.navigation}}
             <a class="menu-button icon-menu" href="#"><span class="word">Menu</span></a>
         {{/if}}
+
+        <aside id="asideTags" class="tags-container">
+            <h1 id="fixedTitle">{{@blog.title}}<br><small>{{@blog.description}}</small></h1>
+        </aside>
     </nav>
 
     <div class="vertical" id="header-content">
@@ -20,8 +28,11 @@
             <h2 class="page-description">{{@blog.description}}</h2>
         </div>
 
-        <section id="tags-container"></section>
+        <!--<section class="tags-container" id="headerNavTagContainer"></section>-->
+
     </div>
+
+
 
 
     <a class="scroll-down icon-arrow-left" href="#content" data-offset="-45"><span class="hidden">Scroll Down</span></a>
@@ -30,7 +41,6 @@
 
 {{!-- The main content area on the homepage --}}
 <main id="content" class="content" role="main">
-
 
 
     <section id="searchContainer">{{> "search"}}</section>   <!-- search results-->
