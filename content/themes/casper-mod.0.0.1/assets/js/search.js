@@ -38,7 +38,7 @@ jQuery(document).ready(function (){
         // setTimeout(function () {
         //     searchBoxInput.focus();
         // },300);
-    })
+    });
 
 
     // update search results count value
@@ -137,7 +137,7 @@ jQuery(document).ready(function (){
 
     function callLiveSearchOnValue(){
         var searchText = searchBoxInput.val();
-        console.log(searchText);
+        //console.log(searchText);
         liveSearch(searchText);
     }
 
@@ -378,7 +378,7 @@ jQuery(document).ready(function (){
     // tag generation for home page
     function tagBuilder(tag) {
         // console.log("Tag builder: ", tag)
-        return '<li><a class="page-description" href="/tag/' + tag.slug + '/">'+tag.name+'</a></li>';
+        return '<li><a class="" href="/tag/' + tag.slug + '/">'+tag.name+'</a></li>';
     }
 
     //generate tags

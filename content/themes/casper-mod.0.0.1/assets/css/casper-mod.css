@@ -6,6 +6,7 @@
 
 #searchContainer {
     height: 100vh;
+    overflow: scroll;
 }
 
 
@@ -218,29 +219,45 @@
 
 }
 
-#searchButton{
-
+.searchButton-common {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     display: inline-block;
-    float: right;
-    height: 38px;
     padding: 0 15px;
     border: 1px solid rgba(255,255,255,.6);
     opacity: 1;
     text-align: center;
-    font-size: 12px;
     text-transform: uppercase;
     line-height: 35px;
     white-space: nowrap;
     border-radius: 3px;
     position: inherit;
-    right: 12em;
     color: #fff;
     transition: 250ms;
 }
 
+#searchButton{
+    float: right;
+    height: 38px;
+    font-size: 12px;
+    right: 12em;
+}
+
+#searchButtonMobile{
+    position: inherit;
+    display: none;
+    top: 11em;
+    height: 38px;
+    font-size: 1em;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    left: 50%;
+    /*border-color: red !important;*/
+}
 
 #searchButton:before{
     font-size: 12px;
@@ -250,10 +267,15 @@
     top: 1px;
 }
 
-#searchButton:hover{
-    background: #fff;
-    color: #000000;
-    /*border-color: rgba(250,250,250,.7);*/
+/*#searchButtonMobile:hover {*/
+    /*background: #fff;*/
+    /*color: #000000;*/
+/*}*/
+
+.searchButton-common:hover{
+    background: #fff !important;
+    color: #000000 !important;
+    border-color: rgba(250,250,250,.7);
 }
 
 .scaleOut-searchInput {
@@ -264,6 +286,12 @@
 
 .hideButton-searchButton {
     opacity: 0 !important;
+    visibility: hidden !important;
+}
+
+
+
+#searchBoxInputMobile{
     visibility: hidden !important;
 }
 

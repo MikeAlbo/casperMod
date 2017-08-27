@@ -16,11 +16,12 @@ $(document).ready(function () {
         asideTags = $("#asideTags"),
         searchButton = $("#searchButton"),
         searchBoxInput = $("#searchBoxInput"),
-        backButton = $("#goBack");
+        backButton = $("#goBack"),
+        mobileSearchButton = $("#searchButtonMobile");
 
     /* --- helpers ---*/
 
-    var documentHeight, st;
+    var documentHeight, st, mobileDevice = false;
 
     // get the document height on page load
     (function () {
@@ -41,7 +42,7 @@ $(document).ready(function () {
         if(windowHeight < 2000) {
             asideTags.addClass('fade-in-element');
         }
-    };
+    }
 
     function setupMenuComponents(windowHeight) {
         if(windowHeight > 2000){
@@ -50,6 +51,38 @@ $(document).ready(function () {
             searchBoxInput.removeClass('search-box-move');
         }
     }
+
+    // search button color based on header.no-cover
+    (function () {
+        if($(headerContainer).hasClass("no-cover")){
+            $(searchButton).css({
+                color: "#9EABB3",
+                borderColor: "#BFC8CD"
+            });
+
+            $(mobileSearchButton).css({
+                color: "#9EABB3",
+                borderColor: "#BFC8CD"
+            });
+        }
+    })();
+
+    // show proper search function based on user's device
+    function selectSearchType(mobile) {
+        if(mobile){
+            $(searchButton).hide();
+            $(mobileSearchButton).show();
+        }
+    }
+
+    // detect mobile browsers
+    (function () {
+        if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+            mobileDevice = true;
+            selectSearchType(true);
+            // preload the search data for non mobile browsers
+        }
+    })();
 
 
 
@@ -106,9 +139,11 @@ $(document).ready(function () {
         }
 
         if(documentHeight < 2000) {
-            return asideTags.addClass('fade-in-element');
-        } else if (st > 650 && documentHeight > 2000) {
-                asideTags.addClass('fade-in-element');
+            asideTags.addClass('fade-in-element');
+        } else if (st > 150 && documentHeight < 2200 ){
+            asideTags.addClass('fade-in-element');
+        } else if (st > 650 && documentHeight > 2201) {
+            asideTags.addClass('fade-in-element');
         } else {
             asideTags.removeClass('fade-in-element');
 

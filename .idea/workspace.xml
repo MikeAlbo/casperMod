@@ -3,14 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="09eafa08-d823-4fc3-a0aa-9fc3341c95d4" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/content/data/ghost-dev.db" afterPath="$PROJECT_DIR$/content/data/ghost-dev.db" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/content/themes/casper-mod.0.0.1/assets/css/casper-mod.css" afterPath="$PROJECT_DIR$/content/themes/casper-mod.0.0.1/assets/css/casper-mod.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/content/themes/casper-mod.0.0.1/assets/js/fixedNav.js" afterPath="$PROJECT_DIR$/content/themes/casper-mod.0.0.1/assets/js/fixedNav.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/content/themes/casper-mod.0.0.1/assets/js/index.js" afterPath="$PROJECT_DIR$/content/themes/casper-mod.0.0.1/assets/js/index.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/content/themes/casper-mod.0.0.1/assets/js/search.js" afterPath="$PROJECT_DIR$/content/themes/casper-mod.0.0.1/assets/js/search.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/content/themes/casper-mod.0.0.1/author.hbs" afterPath="$PROJECT_DIR$/content/themes/casper-mod.0.0.1/author.hbs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/content/themes/casper-mod.0.0.1/index.hbs" afterPath="$PROJECT_DIR$/content/themes/casper-mod.0.0.1/index.hbs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/content/themes/casper-mod.0.0.1/post.hbs" afterPath="$PROJECT_DIR$/content/themes/casper-mod.0.0.1/post.hbs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/content/themes/casper-mod.0.0.1/tag.hbs" afterPath="$PROJECT_DIR$/content/themes/casper-mod.0.0.1/tag.hbs" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -22,15 +19,18 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="Ghost-0" />
+  </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.45027125">
+    <splitter split-orientation="horizontal" split-proportion="0.8897059">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="index.hbs" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/content/themes/casper-mod.0.0.1/index.hbs">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="252">
-                  <caret line="12" column="33" lean-forward="false" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
+                <state relative-caret-position="0">
+                  <caret line="4" column="140" lean-forward="false" selection-start-line="4" selection-start-column="140" selection-end-line="4" selection-end-column="140" />
                   <folding />
                 </state>
               </provider>
@@ -46,11 +46,21 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="casper-mod.css" pinned="false" current-in-tab="true">
+          <file leaf-file-name="casper-mod.css" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/content/themes/casper-mod.0.0.1/assets/css/casper-mod.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="444">
-                  <caret line="81" column="36" lean-forward="false" selection-start-line="81" selection-start-column="36" selection-end-line="81" selection-end-column="36" />
+                <state relative-caret-position="240">
+                  <caret line="239" column="14" lean-forward="false" selection-start-line="239" selection-start-column="14" selection-end-line="239" selection-end-column="14" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/.gitignore">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="84">
+                  <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -59,7 +69,7 @@
           <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/content/themes/casper-mod.0.0.1/assets/js/index.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="61">
+                <state relative-caret-position="294">
                   <caret line="16" column="10" lean-forward="false" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
                   <folding />
                 </state>
@@ -69,8 +79,8 @@
           <file leaf-file-name="screen.css" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/content/themes/casper-mod.0.0.1/assets/css/screen.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="280">
-                  <caret line="1410" column="25" lean-forward="false" selection-start-line="1410" selection-start-column="21" selection-end-line="1410" selection-end-column="25" />
+                <state relative-caret-position="19089">
+                  <caret line="909" column="21" lean-forward="false" selection-start-line="909" selection-start-column="13" selection-end-line="909" selection-end-column="21" />
                   <folding />
                 </state>
               </provider>
@@ -79,12 +89,12 @@
         </leaf>
       </split-first>
       <split-second>
-        <leaf>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="fixedNav.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/content/themes/casper-mod.0.0.1/assets/js/fixedNav.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="804">
-                  <caret line="138" column="7" lean-forward="false" selection-start-line="138" selection-start-column="7" selection-end-line="138" selection-end-column="7" />
+                <state relative-caret-position="1533">
+                  <caret line="73" column="14" lean-forward="false" selection-start-line="73" selection-start-column="14" selection-end-line="73" selection-end-column="14" />
                   <folding />
                 </state>
               </provider>
@@ -93,12 +103,12 @@
           <file leaf-file-name="search.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/content/themes/casper-mod.0.0.1/assets/js/search.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="527">
-                  <caret line="223" column="41" lean-forward="true" selection-start-line="223" selection-start-column="41" selection-end-line="223" selection-end-column="41" />
+                <state relative-caret-position="21">
+                  <caret line="238" column="46" lean-forward="false" selection-start-line="238" selection-start-column="46" selection-end-line="238" selection-end-column="46" />
                   <folding>
                     <element signature="n#!!doc" expanded="true" />
-                    <marker date="1502199755000" expanded="true" signature="8723:8730" ph="»" />
-                    <marker date="1502199755000" expanded="true" signature="9726:9733" ph="»" />
+                    <marker date="1503699142000" expanded="true" signature="8726:8733" ph="»" />
+                    <marker date="1503699142000" expanded="true" signature="9729:9736" ph="»" />
                   </folding>
                 </state>
               </provider>
@@ -107,11 +117,9 @@
           <file leaf-file-name="post.hbs" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/content/themes/casper-mod.0.0.1/post.hbs">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="399">
+                <state relative-caret-position="315">
                   <caret line="15" column="93" lean-forward="false" selection-start-line="15" selection-start-column="93" selection-end-line="15" selection-end-column="93" />
-                  <folding>
-                    <element signature="e#4031#4037#0#HTML" expanded="true" />
-                  </folding>
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -119,11 +127,9 @@
           <file leaf-file-name="author.hbs" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/content/themes/casper-mod.0.0.1/author.hbs">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="783">
+                <state relative-caret-position="840">
                   <caret line="40" column="91" lean-forward="false" selection-start-line="40" selection-start-column="91" selection-end-line="40" selection-end-column="91" />
-                  <folding>
-                    <element signature="e#1816#1822#0#HTML" expanded="true" />
-                  </folding>
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -133,9 +139,7 @@
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="693">
                   <caret line="33" column="91" lean-forward="false" selection-start-line="33" selection-start-column="91" selection-end-line="33" selection-end-column="91" />
-                  <folding>
-                    <element signature="e#1419#1425#0#HTML" expanded="true" />
-                  </folding>
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -169,6 +173,13 @@
       <find>word</find>
       <find>.word</find>
       <find>#searchC</find>
+      <find>go</find>
+      <find>no-cover</find>
+      <find>console.log</find>
+      <find>//console.log</find>
+      <find>// console.log</find>
+      <find>searchButtonM</find>
+      <find>mobile</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -183,13 +194,14 @@
         <option value="$PROJECT_DIR$/content/themes/casper-mod.0.0.1/home.hbs" />
         <option value="$PROJECT_DIR$/content/themes/casper-mod.0.0.1/default.hbs" />
         <option value="$PROJECT_DIR$/content/themes/casper-mod.0.0.1/assets/js/index.js" />
-        <option value="$PROJECT_DIR$/content/themes/casper-mod.0.0.1/index.hbs" />
-        <option value="$PROJECT_DIR$/content/themes/casper-mod.0.0.1/assets/js/fixedNav.js" />
         <option value="$PROJECT_DIR$/content/themes/casper-mod.0.0.1/tag.hbs" />
         <option value="$PROJECT_DIR$/content/themes/casper-mod.0.0.1/author.hbs" />
         <option value="$PROJECT_DIR$/content/themes/casper-mod.0.0.1/post.hbs" />
-        <option value="$PROJECT_DIR$/content/themes/casper-mod.0.0.1/assets/css/casper-mod.css" />
+        <option value="$PROJECT_DIR$/content/themes/casper-mod.0.0.1/assets/js/fixedNav.js" />
+        <option value="$PROJECT_DIR$/content/themes/casper-mod.0.0.1/index.hbs" />
         <option value="$PROJECT_DIR$/content/themes/casper-mod.0.0.1/assets/js/search.js" />
+        <option value="$PROJECT_DIR$/content/themes/casper-mod.0.0.1/assets/css/casper-mod.css" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -233,6 +245,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -245,106 +259,20 @@
               <item name="Ghost-0" type="462c0819:PsiDirectoryNode" />
               <item name="content" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="Ghost-0" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Ghost-0" type="462c0819:PsiDirectoryNode" />
-              <item name="content" type="462c0819:PsiDirectoryNode" />
-              <item name="apps" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Ghost-0" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Ghost-0" type="462c0819:PsiDirectoryNode" />
-              <item name="content" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Ghost-0" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Ghost-0" type="462c0819:PsiDirectoryNode" />
-              <item name="content" type="462c0819:PsiDirectoryNode" />
-              <item name="themes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Ghost-0" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Ghost-0" type="462c0819:PsiDirectoryNode" />
-              <item name="content" type="462c0819:PsiDirectoryNode" />
-              <item name="themes" type="462c0819:PsiDirectoryNode" />
-              <item name="casper-mod.0.0.1" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Ghost-0" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Ghost-0" type="462c0819:PsiDirectoryNode" />
-              <item name="content" type="462c0819:PsiDirectoryNode" />
-              <item name="themes" type="462c0819:PsiDirectoryNode" />
-              <item name="casper-mod.0.0.1" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Ghost-0" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Ghost-0" type="462c0819:PsiDirectoryNode" />
-              <item name="content" type="462c0819:PsiDirectoryNode" />
-              <item name="themes" type="462c0819:PsiDirectoryNode" />
-              <item name="casper-mod.0.0.1" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Ghost-0" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Ghost-0" type="462c0819:PsiDirectoryNode" />
-              <item name="content" type="462c0819:PsiDirectoryNode" />
-              <item name="themes" type="462c0819:PsiDirectoryNode" />
-              <item name="casper-mod.0.0.1" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Ghost-0" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Ghost-0" type="462c0819:PsiDirectoryNode" />
-              <item name="content" type="462c0819:PsiDirectoryNode" />
-              <item name="themes" type="462c0819:PsiDirectoryNode" />
-              <item name="casper-mod.0.0.1" type="462c0819:PsiDirectoryNode" />
-              <item name="partials" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Ghost-0" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Ghost-0" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Ghost-0" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Ghost-0" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="built" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Ghost-0" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Ghost-0" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="built" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Ghost-0" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Ghost-0" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="built" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="fonts" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="SearchEverywhereHistoryKey" value="fix&#9;FILE&#9;file:///Users/michaelalbonetti/Desktop/localDev/Ghost/Ghost-0/content/themes/casper-mod.0.0.1/assets/js/fixedNav.js" />
+    <property name="add_unversioned_files" value="$PROJECT_DIR$/.gitignore" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -445,21 +373,39 @@
       <updated>1500214977151</updated>
       <workItem from="1500214978348" duration="37173000" />
       <workItem from="1500824010261" duration="368000" />
-      <workItem from="1500824394421" duration="76922000" />
+      <workItem from="1500824394421" duration="77943000" />
+      <workItem from="1502286511944" duration="5528000" />
+      <workItem from="1502459812105" duration="7053000" />
+      <workItem from="1503751107764" duration="95000" />
+      <workItem from="1503855854331" duration="499000" />
+      <workItem from="1503857109547" duration="97000" />
+      <workItem from="1503857222420" duration="33000" />
+      <workItem from="1503857286844" duration="117000" />
+      <workItem from="1503857460407" duration="1399000" />
+      <workItem from="1503859379250" duration="199000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="114463000" />
+    <option name="totallyTimeSpent" value="130504000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24954791" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24834238" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Grunt " active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32958034" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32958034" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -507,21 +453,10 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/content/themes/casper-mod.0.0.1/assets/js/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -529,7 +464,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="20" column="10" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="20" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -539,8 +473,8 @@
           <caret line="209" column="56" lean-forward="false" selection-start-line="209" selection-start-column="56" selection-end-line="209" selection-end-column="56" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <marker date="1502199755000" expanded="true" signature="8723:8730" ph="»" />
-            <marker date="1502199755000" expanded="true" signature="9726:9733" ph="»" />
+            <marker date="1503699142000" expanded="true" signature="8726:8733" ph="»" />
+            <marker date="1503699142000" expanded="true" signature="9729:9736" ph="»" />
           </folding>
         </state>
       </provider>
@@ -565,7 +499,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="10" column="18" lean-forward="false" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -573,7 +506,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19950">
           <caret line="950" column="7" lean-forward="false" selection-start-line="950" selection-start-column="1" selection-end-line="950" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -597,9 +529,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -607,7 +536,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="20" column="10" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="20" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -617,8 +545,8 @@
           <caret line="209" column="56" lean-forward="false" selection-start-line="209" selection-start-column="56" selection-end-line="209" selection-end-column="56" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <marker date="1502199755000" expanded="true" signature="8723:8730" ph="»" />
-            <marker date="1502199755000" expanded="true" signature="9726:9733" ph="»" />
+            <marker date="1503699142000" expanded="true" signature="8726:8733" ph="»" />
+            <marker date="1503699142000" expanded="true" signature="9729:9736" ph="»" />
           </folding>
         </state>
       </provider>
@@ -662,13 +590,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2992">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/built/assets/ghost.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-780463">
-          <caret line="5938" column="85" lean-forward="false" selection-start-line="5938" selection-start-column="85" selection-end-line="5938" selection-end-column="85" />
         </state>
       </provider>
     </entry>
@@ -745,25 +666,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/content/themes/casper-mod.0.0.1/home.hbs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
-          <caret line="23" column="8" lean-forward="false" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/content/themes/casper-mod.0.0.1/home.hbs" />
     <entry file="file://$PROJECT_DIR$/content/themes/casper-mod.0.0.1/partials/search.hbs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="828">
           <caret line="56" column="23" lean-forward="false" selection-start-line="56" selection-start-column="23" selection-end-line="56" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -771,7 +681,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -779,7 +688,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1292">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -792,7 +700,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="19" column="69" lean-forward="false" selection-start-line="19" selection-start-column="69" selection-end-line="19" selection-end-column="69" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -800,7 +707,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
           <caret line="17" column="18" lean-forward="true" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -808,15 +714,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1000">
           <caret line="794" column="1" lean-forward="false" selection-start-line="794" selection-start-column="1" selection-end-line="794" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/content/themes/casper-mod.0.0.1/assets/css/screen.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="1410" column="25" lean-forward="false" selection-start-line="1410" selection-start-column="21" selection-end-line="1410" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -824,51 +721,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="301">
           <caret line="3367" column="28" lean-forward="false" selection-start-line="3367" selection-start-column="23" selection-end-line="3367" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/content/themes/casper-mod.0.0.1/assets/js/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="61">
+        <state relative-caret-position="294">
           <caret line="16" column="10" lean-forward="false" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/content/themes/casper-mod.0.0.1/assets/js/fixedNav.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="804">
-          <caret line="138" column="7" lean-forward="false" selection-start-line="138" selection-start-column="7" selection-end-line="138" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/content/themes/casper-mod.0.0.1/index.hbs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="12" column="33" lean-forward="false" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/content/themes/casper-mod.0.0.1/tag.hbs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="693">
-          <caret line="33" column="91" lean-forward="false" selection-start-line="33" selection-start-column="91" selection-end-line="33" selection-end-column="91" />
-          <folding>
-            <element signature="e#1419#1425#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/content/themes/casper-mod.0.0.1/author.hbs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="783">
-          <caret line="40" column="91" lean-forward="false" selection-start-line="40" selection-start-column="91" selection-end-line="40" selection-end-column="91" />
-          <folding>
-            <element signature="e#1816#1822#0#HTML" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -880,33 +740,86 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/content/themes/casper-mod.0.0.1/post.hbs">
+    <entry file="file://$PROJECT_DIR$/content/themes/casper-mod.0.0.1/assets/css/screen.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="15" column="93" lean-forward="false" selection-start-line="15" selection-start-column="93" selection-end-line="15" selection-end-column="93" />
-          <folding>
-            <element signature="e#4031#4037#0#HTML" expanded="true" />
-          </folding>
+        <state relative-caret-position="19089">
+          <caret line="909" column="21" lean-forward="false" selection-start-line="909" selection-start-column="13" selection-end-line="909" selection-end-column="21" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/content/themes/casper-mod.0.0.1/assets/css/casper-mod.css">
+    <entry file="file://$PROJECT_DIR$/core/built/assets/ghost.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="444">
-          <caret line="81" column="36" lean-forward="false" selection-start-line="81" selection-start-column="36" selection-end-line="81" selection-end-column="36" />
+        <state relative-caret-position="155">
+          <caret line="623" column="8" lean-forward="false" selection-start-line="623" selection-start-column="8" selection-end-line="623" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/content/themes/casper-mod.0.0.1/assets/js/fixedNav.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1533">
+          <caret line="73" column="14" lean-forward="false" selection-start-line="73" selection-start-column="14" selection-end-line="73" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/content/themes/casper-mod.0.0.1/post.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="15" column="93" lean-forward="false" selection-start-line="15" selection-start-column="93" selection-end-line="15" selection-end-column="93" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/content/themes/casper-mod.0.0.1/author.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="840">
+          <caret line="40" column="91" lean-forward="false" selection-start-line="40" selection-start-column="91" selection-end-line="40" selection-end-column="91" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/content/themes/casper-mod.0.0.1/tag.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="693">
+          <caret line="33" column="91" lean-forward="false" selection-start-line="33" selection-start-column="91" selection-end-line="33" selection-end-column="91" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/content/themes/casper-mod.0.0.1/assets/js/search.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="223" column="41" lean-forward="true" selection-start-line="223" selection-start-column="41" selection-end-line="223" selection-end-column="41" />
+        <state relative-caret-position="21">
+          <caret line="238" column="46" lean-forward="false" selection-start-line="238" selection-start-column="46" selection-end-line="238" selection-end-column="46" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <marker date="1502199755000" expanded="true" signature="8723:8730" ph="»" />
-            <marker date="1502199755000" expanded="true" signature="9726:9733" ph="»" />
+            <marker date="1503699142000" expanded="true" signature="8726:8733" ph="»" />
+            <marker date="1503699142000" expanded="true" signature="9729:9736" ph="»" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/content/themes/casper-mod.0.0.1/index.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="4" column="140" lean-forward="false" selection-start-line="4" selection-start-column="140" selection-end-line="4" selection-end-column="140" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/content/themes/casper-mod.0.0.1/assets/css/casper-mod.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="239" column="14" lean-forward="false" selection-start-line="239" selection-start-column="14" selection-end-line="239" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

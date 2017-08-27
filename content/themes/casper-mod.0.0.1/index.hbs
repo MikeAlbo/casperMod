@@ -10,14 +10,21 @@
 
         <!--<section class="tags-container" id="fixedNavTagContainer"></section>-->
 
-            <a id="searchButton"  data-offset="-45"><i class="fa fa-search" aria-hidden="true"></i> Search</a>
-            <input type="text" placeholder="post, subjects, authors..." id="searchBoxInput" autocomplete="off" class="search-scroll">
+            <a id="searchButton" class="searchButton-common"  data-offset="-45"><i class="fa fa-search" aria-hidden="true"></i> Search</a>
+            <input type="text" placeholder="post, subjects, tags..." id="searchBoxInput" autocomplete="off" class="search-scroll">
+
+        <a id="searchButtonMobile" class="searchButton-common"  data-offset="-45"><i class="fa fa-search" aria-hidden="true"></i></a>
 
         {{#if @blog.navigation}}
             <a class="menu-button icon-menu" href="#"><span class="word">Menu</span></a>
         {{/if}}
 
-        <aside id="asideTags" class="tags-container">
+
+       <!-- <input type="text" placeholder="post, subjects, tags..." id="searchBoxInputMobile" autocomplete="off" class="search-scroll">-->
+
+
+
+        <aside id="asideTags" class="tags-container post-meta">
             <h1 id="fixedTitle">{{@blog.title}}<br><small>{{@blog.description}}</small></h1>
         </aside>
     </nav>
